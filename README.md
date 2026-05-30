@@ -1,292 +1,147 @@
-# Sports Analytics CV
+# AI-Powered Sports Vision Analytics System
 
-<div align="center">
+## Overview
 
-![Sports Analytics CV](https://img.shields.io/badge/AI-Computer%20Vision-00FF87?style=for-the-badge&logo=opencv)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Detection-0096FF?style=for-the-badge)
-![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF6B35?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.9+-FFD700?style=for-the-badge&logo=python)
+This project presents an intelligent sports analytics platform that uses advanced Computer Vision and Artificial Intelligence techniques to evaluate sports footage in real time. The system is capable of identifying players, monitoring movement patterns, estimating speed, analyzing tactical formations, and generating detailed performance statistics from both images and videos.
 
-**An end-to-end AI Computer Vision system for real-time sports analytics.**  
-Detect players, track movements, analyze formations, and generate tactical insights from sports images and videos.
-
-</div>
+The platform combines deep learning models with interactive visualization tools to assist coaches, analysts, researchers, and students in understanding gameplay dynamics more effectively.
 
 ---
 
-## ✨ Features
+# Core Functionalities
 
-| Feature | Technology | Description |
-|---|---|---|
-| 🎯 Player Detection | YOLOv8 | Detect players and ball with bounding boxes |
-| 📡 Multi-Object Tracking | ByteTrack | Persistent player IDs across video frames |
-| 🔥 Heatmaps | OpenCV + Matplotlib | Player position density visualization |
-| 🏃 Speed Estimation | Pixel Calibration | Real-time speed in km/h per player |
-| 📐 Formation Analysis | K-Means Clustering | Detect 4-4-2, 4-3-3, etc. formations |
-| ⚽ Possession Tracking | Proximity Analysis | Ball possession % per player |
-| 🦴 Pose Estimation | MediaPipe | Body landmark detection |
-| 📊 Analytics Dashboard | Streamlit | Live stats, charts, and metrics |
-| 📄 Export Reports | ReportLab | PDF + CSV report generation |
-| 🔴 Live Webcam | OpenCV | Real-time webcam analytics |
+### Player and Ball Recognition
 
----
+The application uses the YOLOv8 detection framework to accurately identify players and sports equipment within video frames. Bounding boxes are generated around detected objects for precise tracking and analysis.
 
-## 🚀 Quick Start
+### Real-Time Object Tracking
 
-### Option 1: Automated Setup (Recommended)
+ByteTrack is integrated to maintain unique identities for players throughout the video sequence. This allows consistent movement analysis across multiple frames.
 
-**Windows:**
-```bash
-setup.bat
-```
+### Motion Heatmap Generation
 
-**Linux / Mac:**
-```bash
-chmod +x setup.sh && ./setup.sh
-```
+Using OpenCV and visualization libraries, the system creates heatmaps that display frequently occupied player positions and movement density during gameplay.
 
-Then start the app:
-```bash
-python run.py or run_gui
-```
+### Speed and Distance Analysis
 
-### Option 2: Manual Setup
+The software estimates player speed and travel distance using frame-based motion calculations and pixel-to-distance calibration techniques.
 
-```bash
-# 1. Create virtual environment
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+### Tactical Formation Detection
 
-# 2. Install dependencies
-pip install -r requirements.txt
+K-Means clustering algorithms are employed to identify team formations such as 4-3-3, 4-4-2, and other strategic layouts based on player positioning.
 
-# 3. Generate sample data
-python scripts/generate_sample_data.py
+### Ball Possession Insights
 
-# 4. Download AI models (auto on first run, or pre-download)
-python scripts/download_models.py
+Possession statistics are calculated by analyzing the proximity between players and the detected ball over time.
 
-# 5. Launch the app
-streamlit run app.py
-```
+### Human Pose Estimation
 
-Open your browser at: **http://localhost:8501**
+MediaPipe pose estimation is used to extract body landmarks for movement and posture analysis.
+
+### Interactive Dashboard
+
+A Streamlit-based dashboard provides real-time statistics, charts, performance summaries, and downloadable outputs.
+
+### Report Exporting
+
+The system supports exporting analytical results in PDF and CSV formats using ReportLab and Pandas.
 
 ---
 
-## 🗂️ Project Structure
+# System Workflow
 
-```
-sports_analytics_cv/
-│
-├── app.py                    # Main Streamlit application
-├── run.py                    # CLI launcher & environment checker
-├── config.yaml               # Global configuration
-├── requirements.txt          # Python dependencies
-├── setup.bat / setup.sh      # Automated setup scripts
-├── .env.example              # Environment variables template
-├── Dockerfile                # Docker containerization
-│
-├── models/                   # AI model wrappers
-│   ├── model_manager.py      # Auto-download & device management
-│   ├── yolo_detector.py      # YOLOv8 detection + tracking
-│   ├── pose_estimator.py     # MediaPipe pose estimation
-│   └── weights/              # Downloaded model files (auto-created)
-│
-├── analytics/                # Sports analytics engine
-│   ├── heatmap.py            # Player position heatmaps
-│   ├── speed_estimator.py    # Speed & distance estimation
-│   ├── formation_analyzer.py # K-Means formation detection
-│   ├── possession_tracker.py # Ball possession analysis
-│   ├── statistics.py         # Match statistics aggregation
-│   └── report_generator.py   # PDF & CSV export
-│
-├── processors/               # Media processing pipelines
-│   ├── image_processor.py    # Static image analysis
-│   ├── video_processor.py    # Video frame-by-frame analysis
-│   └── stream_processor.py   # Live webcam/stream processing
-│
-├── ui/                       # Streamlit UI components
-│   ├── components.py         # Shared widgets & CSS theme
-│   ├── image_tab.py          # Image analysis tab
-│   ├── video_tab.py          # Video analytics tab
-│   └── stats_tab.py          # Statistics & export tab
-│
-├── utils/                    # Utilities
-│   ├── logger.py             # Centralized logging
-│   ├── drawing.py            # Frame annotation functions
-│   └── file_utils.py         # File I/O & config loading
-│
-├── scripts/                  # Standalone scripts
-│   ├── download_models.py    # Pre-download model weights
-│   ├── generate_sample_data.py # Create test images & videos
-│   └── benchmark.py          # Performance benchmarking
-│
-├── dataset/                  # Sample data
-│   ├── sample_images/        # Test sports images
-│   └── sample_videos/        # Test sports video
-│
-├── uploads/                  # User-uploaded files (runtime)
-├── outputs/                  # Processed outputs (runtime)
-│   ├── annotated_images/
-│   ├── annotated_videos/
-│   ├── heatmaps/
-│   └── reports/
-└── logs/                     # Application logs
-```
+1. User uploads an image or sports video.
+2. Frames are processed using OpenCV.
+3. YOLOv8 performs player and object detection.
+4. ByteTrack assigns tracking IDs.
+5. Analytical modules calculate movement, speed, and formations.
+6. Results are visualized through graphs, heatmaps, and dashboards.
+7. Reports are generated for download.
 
 ---
 
-## 🎮 Usage Guide
+# Technologies and Models Used
 
-### Image Analysis
-1. Go to **📸 Image Analysis** tab
-2. Upload a sports image (JPG/PNG) or select a sample
-3. Adjust confidence threshold in the sidebar
-4. View detected players, ball, formation inference
-5. Download the annotated image
-
-### Video Analytics
-1. Go to **🎬 Video Analytics** tab
-2. Upload a sports video (MP4/AVI) or select a sample
-3. Set max frames to analyze (higher = slower but more complete)
-4. Click **Analyze Video**
-5. View player trajectories, heatmap, speed charts
-
-### Live Webcam
-1. Go to **🎬 Video Analytics** tab
-2. Enable **🔴 Use webcam** checkbox
-3. Click **Start Webcam** for real-time tracking
-
-### Export Reports
-1. Run video analysis first
-2. Go to **📊 Statistics & Export** tab
-3. Download **PDF Report**, **CSV Data**, or **JSON**
+| Component             | Technology         |
+| --------------------- | ------------------ |
+| Object Detection      | YOLOv8             |
+| Multi-Object Tracking | ByteTrack          |
+| Pose Detection        | MediaPipe          |
+| Visualization         | OpenCV, Matplotlib |
+| Dashboard Interface   | Streamlit          |
+| Machine Learning      | Scikit-Learn       |
+| Deep Learning Backend | PyTorch            |
+| Data Processing       | Pandas             |
+| Report Generation     | ReportLab          |
 
 ---
 
-## ⚙️ Configuration
+# Application Modules
 
-Edit `config.yaml` to customize:
-```yaml
-detection:
-  model: "yolov8n.pt"          # nano (fast) or yolov8s.pt (accurate)
-  confidence_threshold: 0.45
+## Detection Module
 
-analytics:
-  pixels_per_meter: 10.0       # Calibrate for speed accuracy
-  heatmap_sigma: 20            # Heatmap smoothing
+Responsible for identifying players, balls, and other game elements from visual input.
 
-video:
-  max_frames: 500              # Limit frames processed
-  show_trajectories: true
-```
+## Tracking Module
 
----
+Maintains continuous player tracking and assigns persistent IDs.
 
-## 🚢 Deployment
+## Analytics Module
 
-### Local
-```bash
-python run.py
-```
+Processes tactical and statistical information including:
 
-### Streamlit Cloud
-1. Push to GitHub
-2. Connect repo at [share.streamlit.io](https://share.streamlit.io)
-3. Set entry point: `app.py`
+* Heatmaps
+* Speed analysis
+* Formation recognition
+* Possession statistics
 
-### HuggingFace Spaces
-1. Create a new Space (SDK: Streamlit)
-2. Upload project files
-3. App auto-deploys
+## User Interface Module
 
-### Docker
-```bash
-docker build -t sports-analytics-cv .
-docker run -p 8501:8501 sports-analytics-cv
-```
+Provides an easy-to-use dashboard for uploading media, viewing analytics, and exporting reports.
 
-### Render / Railway
-- Set start command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
-- Build command: `pip install -r requirements.txt && python scripts/generate_sample_data.py`
+## Data Export Module
 
-### Google Colab
-```python
-!pip install -r requirements.txt
-!python scripts/generate_sample_data.py
-!streamlit run app.py &
-# Then use ngrok or localtunnel to expose port 8501
-```
+Creates downloadable PDF reports and CSV summaries for further evaluation.
 
 ---
 
-## 🔧 CLI Reference
+# Deployment Options
 
-```bash
-python run.py                       # Launch Streamlit UI
-python run.py --check               # Environment health check
-python run.py --download            # Pre-download model weights
-python run.py --image path/to/img   # CLI image analysis
-python run.py --video path/to/vid   # CLI video analysis
-python scripts/benchmark.py         # Performance benchmark
-```
+The project can be deployed on multiple platforms including:
 
----
-
-## 📦 Key Dependencies
-
-| Package | Version | Purpose |
-|---|---|---|
-| `ultralytics` | ≥8.1.0 | YOLOv8 + ByteTrack |
-| `torch` | ≥2.0.0 | Deep learning backend |
-| `opencv-python-headless` | ≥4.9 | Image/video processing |
-| `mediapipe` | ≥0.10 | Pose estimation |
-| `streamlit` | ≥1.32 | Web UI |
-| `scikit-learn` | ≥1.3 | K-Means formation |
-| `scipy` | ≥1.11 | Gaussian heatmaps |
-| `reportlab` | ≥4.0 | PDF reports |
-| `pandas` | ≥2.0 | Data analysis |
+* Local systems
+* Docker containers
+* Streamlit Cloud
+* HuggingFace Spaces
+* Google Colab
+* Railway or Render services
 
 ---
 
-## 🧪 Environment Check
+# Advantages of the System
 
-```bash
-python run.py --check
-```
-
-Expected output:
-```
-✅ streamlit
-✅ ultralytics
-✅ cv2
-✅ torch
-✅ numpy
-...
-✅ All required packages installed!
-```
+* Real-time sports analysis
+* Automated tactical insights
+* Accurate player tracking
+* Interactive data visualization
+* Easy deployment and scalability
+* Useful for coaching, research, and academic projects
 
 ---
 
-## 📜 License
+# Future Improvements
 
-MIT License — Free for academic, research, and portfolio use.
+Future versions of the system may include:
 
----
-
-## 🏗️ Built With
-
-- **YOLOv8** by Ultralytics — State-of-the-art object detection
-- **ByteTrack** — Multi-object tracking algorithm
-- **MediaPipe** by Google — Human pose estimation
-- **Streamlit** — Interactive data science UI
-- **OpenCV** — Computer vision primitives
-- **ReportLab** — PDF generation
-- **PyTorch** — Neural network inference
+* Team classification using jersey colors
+* Automatic event detection (goals, fouls, passes)
+* AI-based performance prediction
+* 3D motion analysis
+* Cloud database integration
+* Multi-camera synchronization
 
 ---
 
-<div align="center">
-⚽ Built for Final Year Projects · Research · Portfolio · Deployment
-</div>
+# Conclusion
+
+The AI-Powered Sports Vision Analytics System demonstrates how Computer Vision and Deep Learning can transform sports analysis into an automated and data-driven process. By integrating YOLOv8, ByteTrack, MediaPipe, and Streamlit, the project delivers intelligent gameplay insights with high efficiency and usability. The platform is suitable for educational projects, sports research, and professional analytics applications.
