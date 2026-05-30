@@ -1,0 +1,248 @@
+[2026-05-23 23:19:52] INFO     __main__                       Initializing AI models...
+[2026-05-23 23:19:52] WARNING  models.model_manager           No GPU detected — using CPU. Install CUDA PyTorch for GPU acceleration.
+[2026-05-23 23:19:52] INFO     models.model_manager           ModelManager ready | device=cpu | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:19:54] INFO     models.model_manager           Loading cached YOLO model: E:\project\sports_analytics_cv\models\weights\yolov8l.pt
+[2026-05-23 23:19:54] INFO     models.model_manager           YOLO model ready on cpu
+[2026-05-23 23:19:55] WARNING  models.pose_estimator          MediaPipe init failed: module 'mediapipe' has no attribute 'solutions' — pose estimation disabled
+[2026-05-23 23:19:55] INFO     __main__                       Models ready
+[2026-05-23 23:19:55] INFO     __main__                       Initializing live-stream model...
+[2026-05-23 23:19:55] WARNING  models.model_manager           No GPU detected — using CPU. Install CUDA PyTorch for GPU acceleration.
+[2026-05-23 23:19:55] INFO     models.model_manager           ModelManager ready | device=cpu | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:19:55] INFO     models.model_manager           Downloading live YOLO model: yolov8s.pt → E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-23 23:19:59] INFO     models.model_manager           Copied weights to E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-23 23:19:59] INFO     models.model_manager           Live YOLO model ready on cpu
+[2026-05-23 23:19:59] INFO     __main__                       Live-stream model ready
+[2026-05-23 23:19:59] INFO     __main__                       Initializing YOLOv8-Pose model...
+[2026-05-23 23:19:59] WARNING  models.model_manager           No GPU detected — using CPU. Install CUDA PyTorch for GPU acceleration.
+[2026-05-23 23:19:59] INFO     models.model_manager           ModelManager ready | device=cpu | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:19:59] INFO     models.model_manager           Downloading pose model: yolov8s-pose.pt → E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-23 23:20:04] INFO     models.model_manager           Copied pose weights to E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-23 23:20:04] INFO     models.model_manager           Pose model ready on cpu
+[2026-05-23 23:20:04] INFO     models.pose_estimator          YoloPoseEstimator ready (GPU-native COCO 17-keypoint pose)
+[2026-05-23 23:20:04] INFO     __main__                       YOLOv8-Pose model ready
+[2026-05-23 23:20:04] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:20:04] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:20:15] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:20:15] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:20:15] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-23 23:20:15] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-23 23:20:26] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:20:26] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:20:26] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-23 23:20:26] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-23 23:25:05] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:25:05] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:25:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:25:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:25:11] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-23 23:25:11] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-23 23:55:14] INFO     __main__                       Initializing AI models...
+[2026-05-23 23:55:14] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-23 23:55:14] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:55:16] INFO     models.model_manager           Loading cached YOLO model: E:\project\sports_analytics_cv\models\weights\yolov8l.pt
+[2026-05-23 23:55:17] INFO     models.model_manager           YOLO model ready on cuda (FP16 enabled)
+[2026-05-23 23:55:17] WARNING  models.pose_estimator          MediaPipe init failed: module 'mediapipe' has no attribute 'solutions' — pose estimation disabled
+[2026-05-23 23:55:17] INFO     __main__                       Models ready
+[2026-05-23 23:55:17] INFO     __main__                       Initializing live-stream model...
+[2026-05-23 23:55:17] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-23 23:55:17] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:55:17] INFO     models.model_manager           Downloading live YOLO model: yolov8s.pt → E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-23 23:55:22] INFO     models.model_manager           Copied weights to E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-23 23:55:22] INFO     models.model_manager           Live YOLO model ready on cuda (FP16 enabled — max throughput)
+[2026-05-23 23:55:22] INFO     __main__                       Live-stream model ready
+[2026-05-23 23:55:22] INFO     __main__                       Initializing YOLOv8-Pose model...
+[2026-05-23 23:55:22] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-23 23:55:22] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:55:22] INFO     models.model_manager           Downloading pose model: yolov8s-pose.pt → E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-23 23:55:26] INFO     models.model_manager           Copied pose weights to E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-23 23:55:26] INFO     models.model_manager           Pose model ready on cuda (FP16 enabled)
+[2026-05-23 23:55:26] INFO     models.pose_estimator          YoloPoseEstimator ready (GPU-native COCO 17-keypoint pose)
+[2026-05-23 23:55:26] INFO     __main__                       YOLOv8-Pose model ready
+[2026-05-23 23:55:26] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:55:26] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:55:26] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:55:26] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:55:49] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:55:49] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:55:49] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-23 23:55:49] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-23 23:58:07] INFO     __main__                       Initializing AI models...
+[2026-05-23 23:58:07] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-23 23:58:07] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:58:09] INFO     models.model_manager           Loading cached YOLO model: E:\project\sports_analytics_cv\models\weights\yolov8l.pt
+[2026-05-23 23:58:09] INFO     models.model_manager           YOLO model ready on cuda (FP16 enabled)
+[2026-05-23 23:58:10] WARNING  models.pose_estimator          MediaPipe init failed: module 'mediapipe' has no attribute 'solutions' — pose estimation disabled
+[2026-05-23 23:58:10] INFO     __main__                       Models ready
+[2026-05-23 23:58:10] INFO     __main__                       Initializing live-stream model...
+[2026-05-23 23:58:10] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-23 23:58:10] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:58:10] INFO     models.model_manager           Loading cached live YOLO model: E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-23 23:58:10] INFO     models.model_manager           Live YOLO model ready on cuda (FP16 enabled — max throughput)
+[2026-05-23 23:58:10] INFO     __main__                       Live-stream model ready
+[2026-05-23 23:58:10] INFO     __main__                       Initializing YOLOv8-Pose model...
+[2026-05-23 23:58:10] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-23 23:58:10] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-23 23:58:10] INFO     models.model_manager           Loading cached pose model: E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-23 23:58:10] INFO     models.model_manager           Pose model ready on cuda (FP16 enabled)
+[2026-05-23 23:58:10] INFO     models.pose_estimator          YoloPoseEstimator ready (GPU-native COCO 17-keypoint pose)
+[2026-05-23 23:58:10] INFO     __main__                       YOLOv8-Pose model ready
+[2026-05-23 23:58:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:25] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:25] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:25] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-23 23:58:28] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:28] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:28] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-23 23:58:28] INFO     processors.video_processor     Video: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 | 2160×4096 | 25.0 FPS | 157 frames
+[2026-05-23 23:58:28] INFO     processors.video_processor     Output video: E:\project\sports_analytics_cv\storage\videos\output\10349008-uhd_2160_4096_25fps_analyzed.mp4
+[2026-05-23 23:58:41] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:41] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:41] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-23 23:58:45] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:45] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:58:45] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-23 23:58:45] INFO     processors.video_processor     Video: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 | 2160×4096 | 25.0 FPS | 157 frames
+[2026-05-23 23:58:45] INFO     processors.video_processor     Output video: E:\project\sports_analytics_cv\storage\videos\output\10349008-uhd_2160_4096_25fps_analyzed.mp4
+[2026-05-23 23:58:46] INFO     processors.video_processor     Video processing complete: MatchStatistics(players=0, formation=?, fastest=0.0km/h)
+[2026-05-23 23:59:27] INFO     processors.video_processor     Video processing complete: MatchStatistics(players=0, formation=?, fastest=0.0km/h)
+[2026-05-23 23:59:28] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:59:28] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:59:28] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-23 23:59:36] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:59:36] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-23 23:59:36] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-24 00:10:10] INFO     __main__                       Initializing AI models...
+[2026-05-24 00:10:10] WARNING  models.model_manager           No GPU detected — using CPU. Install CUDA PyTorch for GPU acceleration.
+[2026-05-24 00:10:10] INFO     models.model_manager           ModelManager ready | device=cpu | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-24 00:10:12] INFO     models.model_manager           Loading cached YOLO model: E:\project\sports_analytics_cv\models\weights\yolov8l.pt
+[2026-05-24 00:10:12] INFO     models.model_manager           YOLO model ready on cpu
+[2026-05-24 00:10:13] WARNING  models.pose_estimator          MediaPipe init failed: module 'mediapipe' has no attribute 'solutions' — pose estimation disabled
+[2026-05-24 00:10:13] INFO     __main__                       Models ready
+[2026-05-24 00:10:13] INFO     __main__                       Initializing live-stream model...
+[2026-05-24 00:10:13] WARNING  models.model_manager           No GPU detected — using CPU. Install CUDA PyTorch for GPU acceleration.
+[2026-05-24 00:10:13] INFO     models.model_manager           ModelManager ready | device=cpu | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-24 00:10:13] INFO     models.model_manager           Downloading live YOLO model: yolov8s.pt → E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-24 00:10:13] INFO     models.model_manager           Copied weights to E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-24 00:10:13] INFO     models.model_manager           Live YOLO model ready on cpu
+[2026-05-24 00:10:13] INFO     __main__                       Live-stream model ready
+[2026-05-24 00:10:13] INFO     __main__                       Initializing YOLOv8-Pose model...
+[2026-05-24 00:10:13] WARNING  models.model_manager           No GPU detected — using CPU. Install CUDA PyTorch for GPU acceleration.
+[2026-05-24 00:10:13] INFO     models.model_manager           ModelManager ready | device=cpu | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-24 00:10:13] INFO     models.model_manager           Downloading pose model: yolov8s-pose.pt → E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-24 00:10:13] INFO     models.model_manager           Copied pose weights to E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-24 00:10:13] INFO     models.model_manager           Pose model ready on cpu
+[2026-05-24 00:10:13] INFO     models.pose_estimator          YoloPoseEstimator ready (GPU-native COCO 17-keypoint pose)
+[2026-05-24 00:10:13] INFO     __main__                       YOLOv8-Pose model ready
+[2026-05-24 00:10:13] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:10:13] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:10:23] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:10:23] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:10:23] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:10:23] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:10:46] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:10:46] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:12:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:12:10] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:14:56] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:14:56] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:15:02] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:15:02] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:15:02] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:15:02] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:15:14] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:15:14] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:15:14] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:15:14] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:23:59] INFO     __main__                       Initializing AI models...
+[2026-05-24 00:23:59] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-24 00:23:59] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-24 00:24:01] INFO     models.model_manager           Loading cached YOLO model: E:\project\sports_analytics_cv\models\weights\yolov8l.pt
+[2026-05-24 00:24:01] INFO     models.model_manager           YOLO model ready on cuda (FP16 enabled)
+[2026-05-24 00:24:01] WARNING  models.pose_estimator          MediaPipe init failed: module 'mediapipe' has no attribute 'solutions' — pose estimation disabled
+[2026-05-24 00:24:01] INFO     __main__                       Models ready
+[2026-05-24 00:24:01] INFO     __main__                       Initializing live-stream model...
+[2026-05-24 00:24:01] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-24 00:24:01] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-24 00:24:01] INFO     models.model_manager           Downloading live YOLO model: yolov8s.pt → E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-24 00:24:01] INFO     models.model_manager           Copied weights to E:\project\sports_analytics_cv\models\weights\yolov8s.pt
+[2026-05-24 00:24:01] INFO     models.model_manager           Live YOLO model ready on cuda (FP16 enabled — max throughput)
+[2026-05-24 00:24:01] INFO     __main__                       Live-stream model ready
+[2026-05-24 00:24:01] INFO     __main__                       Initializing YOLOv8-Pose model...
+[2026-05-24 00:24:01] INFO     models.model_manager           CUDA device detected: NVIDIA GeForce RTX 4060 Laptop GPU
+[2026-05-24 00:24:01] INFO     models.model_manager           ModelManager ready | device=cuda | weights_dir=E:\project\sports_analytics_cv\models\weights
+[2026-05-24 00:24:01] INFO     models.model_manager           Downloading pose model: yolov8s-pose.pt → E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-24 00:24:01] INFO     models.model_manager           Copied pose weights to E:\project\sports_analytics_cv\models\weights\yolov8s-pose.pt
+[2026-05-24 00:24:02] INFO     models.model_manager           Pose model ready on cuda (FP16 enabled)
+[2026-05-24 00:24:02] INFO     models.pose_estimator          YoloPoseEstimator ready (GPU-native COCO 17-keypoint pose)
+[2026-05-24 00:24:02] INFO     __main__                       YOLOv8-Pose model ready
+[2026-05-24 00:24:02] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:02] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:02] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:02] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:09] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:09] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:12] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:12] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:12] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:24:12] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:24:41] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:41] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:41] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:24:41] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:24:42] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-24 00:24:44] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:44] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:44] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:24:44] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:24:44] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-24 00:24:44] INFO     processors.video_processor     Video: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 | 2160×4096 | 25.0 FPS | 157 frames
+[2026-05-24 00:24:44] INFO     processors.video_processor     Output video: E:\project\sports_analytics_cv\storage\videos\output\10349008-uhd_2160_4096_25fps_analyzed.mp4
+[2026-05-24 00:24:49] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:49] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:24:49] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:24:49] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:24:49] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-24 00:24:49] INFO     processors.video_processor     Video: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 | 2160×4096 | 25.0 FPS | 157 frames
+[2026-05-24 00:24:49] INFO     processors.video_processor     Output video: E:\project\sports_analytics_cv\storage\videos\output\10349008-uhd_2160_4096_25fps_analyzed.mp4
+[2026-05-24 00:25:41] INFO     processors.video_processor     Video processing complete: MatchStatistics(players=0, formation=?, fastest=0.0km/h)
+[2026-05-24 00:25:41] INFO     processors.video_processor     Video processing complete: MatchStatistics(players=0, formation=?, fastest=0.0km/h)
+[2026-05-24 00:25:41] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:25:41] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:25:41] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:25:41] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:25:42] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-24 00:25:49] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:25:49] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:25:49] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:25:49] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:25:50] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\10349008-uhd_2160_4096_25fps.mp4 (16862.2 KB)
+[2026-05-24 00:26:45] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:26:45] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:26:45] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:26:45] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:26:45] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:26:45] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:26:45] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:26:45] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:26:46] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\WhatsApp Video 2026-05-21 at 20.06.29.mp4 (13578.3 KB)
+[2026-05-24 00:26:47] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:26:47] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:26:47] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:26:47] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:26:48] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\WhatsApp Video 2026-05-21 at 20.06.29.mp4 (13578.3 KB)
+[2026-05-24 00:26:48] INFO     processors.video_processor     Video: E:\project\sports_analytics_cv\storage\videos\input\WhatsApp Video 2026-05-21 at 20.06.29.mp4 | 1906×1080 | 30.0 FPS | 200 frames
+[2026-05-24 00:26:48] INFO     processors.video_processor     Output video: E:\project\sports_analytics_cv\storage\videos\output\WhatsApp Video 2026-05-21 at 20.06.29_analyzed.mp4
+[2026-05-24 00:27:06] INFO     processors.video_processor     Video processing complete: MatchStatistics(players=1, formation=?, fastest=75.9km/h)
+[2026-05-24 00:27:06] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:27:06] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:27:06] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:27:06] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:27:07] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\WhatsApp Video 2026-05-21 at 20.06.29.mp4 (13578.3 KB)
+[2026-05-24 00:27:11] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:27:11] INFO     analytics.team_classifier      TeamClassifier initialised (auto jersey-color clustering)
+[2026-05-24 00:27:11] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (243.1 KB)
+[2026-05-24 00:27:11] INFO     processors.image_processor     Processing image: E:\project\sports_analytics_cv\storage\images\input\p1.jpg (1920×1080)
+[2026-05-24 00:27:12] INFO     utils.file_utils               Saved upload: E:\project\sports_analytics_cv\storage\videos\input\WhatsApp Video 2026-05-21 at 20.06.29.mp4 (13578.3 KB)

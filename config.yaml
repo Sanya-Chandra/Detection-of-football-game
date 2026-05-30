@@ -1,0 +1,112 @@
+# ============================================================
+# Sports Analytics CV — Global Configuration
+# ============================================================
+
+app:
+  name: "Sports Analytics CV"
+  version: "1.0.0"
+  debug: false
+  log_level: "INFO"
+  log_file: "logs/app.log"
+
+paths:
+  uploads: "storage/images/input"
+  outputs: "storage"
+  models: "models/weights"
+  dataset: "storage/dataset"
+  static: "static"
+  logs: "logs"
+  reports: "storage/reports"
+  heatmaps: "storage/images/output"
+  annotated_images: "storage/images/output"
+  annotated_videos: "storage/videos/output"
+
+detection:
+  model: "yolov8l.pt"           # large model — best accuracy, used for file analysis
+  live_model: "yolov8s.pt"      # fast model — used for live webcam/stream (GPU: ~40-60 FPS)
+  confidence_threshold: 0.20     # lowered to catch more distant players & balls
+  ball_confidence_threshold: 0.08  # dedicated lower threshold for ball fallback
+  player_confidence_threshold: 0.25
+  player_max_area: 180000
+  # Y-axis zone filtering (as fraction of image height 0.0–1.0)
+  # Audience sits in stands (top ~30%), coaches/boards at very bottom (~92%+)
+  player_field_y_min: 0.28    # ignore persons above this line (stands/crowd)
+  player_field_y_max: 0.92    # ignore persons below this line (coaches/ad boards)
+  # Minimum bounding box height as fraction of image height (tiny=crowd noise)
+  player_min_box_height: 0.06
+  iou_threshold: 0.45          # slightly lower = fewer missed overlapping players
+  device: "auto"                # "auto" | "cpu" | "cuda" | "mps"
+  fp16: true                    # FP16 half-precision on CUDA — doubles GPU throughput
+  classes:
+    person: 0
+    sports_ball: 32
+    # Extended classes for sports context
+    target_classes: [0, 32]     # person + ball
+  image_size: 1280               # larger = much better small-object (ball) detection
+  live_image_size: 640           # reduced resolution for live stream — ~4x faster than 1280
+
+tracking:
+  tracker: "botsort.yaml"       # BotSORT: better Re-ID, stable player IDs across occlusion
+  track_high_thresh: 0.5
+  track_low_thresh: 0.1
+  new_track_thresh: 0.6
+  track_buffer: 30
+  match_thresh: 0.8
+
+pose:
+  enabled: true
+  yolo_model: "yolov8s-pose.pt" # GPU-native YOLOv8-Pose (replaces MediaPipe)
+  pose_on_live: false           # Run pose on live stream (true = more GPU load)
+  model_complexity: 1           # Legacy MediaPipe fallback setting
+  min_detection_confidence: 0.45
+  min_tracking_confidence: 0.5
+
+team:
+  enabled: true                 # Auto-classify players into Team A / Team B
+  update_interval: 15           # Frames between re-clustering jersey colors
+  min_samples: 4                # Minimum players before clustering begins
+  color_a: [0, 220, 255]        # BGR color for Team A (yellow-green)
+  color_b: [0, 80, 255]         # BGR color for Team B (orange-red)
+
+analytics:
+  fps_assumption: 25            # assumed FPS if not detected
+  pixels_per_meter: 10.0        # calibration — pixels per real-world meter
+  field_width_m: 105            # standard football pitch width (m)
+  field_height_m: 68            # standard football pitch height (m)
+  heatmap_resolution: [600, 400]
+  heatmap_sigma: 20             # gaussian blur sigma for heatmaps
+  formation_clusters: 4         # K-Means clusters for formation detection
+  possession_radius_px: 80      # pixels radius to attribute ball possession
+
+video:
+  max_frames: 500               # max frames to process (0 = unlimited)
+  output_fps: 25
+  output_codec: "mp4v"
+  fast_mode: false  # Skip heavy drawing for file video preview
+  live_fast_mode: true          # Always skip heavy effects (neon glow, trails) for live stream
+  target_fps: 30    # Desired FPS for live stream
+  show_trajectories: true
+  trajectory_length: 30         # frames of trajectory to draw
+
+ui:
+  page_title: "Sports Analytics CV"
+  page_icon: "⚽"
+  layout: "wide"
+  theme: "dark"
+  primary_color: "#00FF87"
+  max_upload_size_mb: 200
+
+export:
+  pdf_dpi: 150
+  csv_separator: ","
+  report_include_frames: true
+
+models_download:
+  yolov8n:
+    url: "auto"                 # ultralytics auto-downloads
+    filename: "yolov8n.pt"
+    size_mb: 6
+  yolov8s:
+    url: "auto"
+    filename: "yolov8s.pt"
+    size_mb: 22

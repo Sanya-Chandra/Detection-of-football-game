@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "E:\\project\\datasets",
+  "weights_dir": "E:\\project\\sports_analytics_cv\\weights",
+  "runs_dir": "E:\\project\\sports_analytics_cv\\runs",
+  "uuid": "041454fcfde465d0549096c891fefbe5069c4cbc869402b415bcc31926998d27",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}
